@@ -1,7 +1,5 @@
 package com.ahs.easymediahelper;
 
-import static com.ahs.easymediahelper.MediaHelper.saveFileFromUri;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -400,7 +398,7 @@ public class EasyMediaHelper {
             Bitmap bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
             try {
                 // Correct the image orientation
-                bitmap = MediaHelper.correctImageOrientation(context, bitmap, Uri.fromFile(imgFile));
+                bitmap = correctImageOrientation(context, bitmap, Uri.fromFile(imgFile));
             } catch (IOException e) {
                 Log.e("MediaHelper", "Error correcting image orientation", e);
             }
