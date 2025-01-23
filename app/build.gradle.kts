@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("maven-publish")
 }
 
 android {
@@ -35,7 +36,20 @@ android {
 
 
 }
-
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.areebhussainsiddiqui"
+            artifactId = "EasyMediaHelper"
+            version = "1.1"
+        }
+    }
+    repositories {
+        maven {
+            url = uri("https://jitpack.io")
+        }
+    }
+}
 dependencies {
 
     implementation(libs.appcompat)
