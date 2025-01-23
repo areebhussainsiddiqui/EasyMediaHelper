@@ -1,5 +1,5 @@
 plugins {
-    id   ("com.android.library")  // Change this to 'com.android.library'
+    id("com.android.application") version "8.8.0" // Change this to 'com.android.library'
     id("maven-publish")
 
 }
