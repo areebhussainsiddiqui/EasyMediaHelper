@@ -32,9 +32,9 @@ android {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.areebhussainsiddiqui"
-            artifactId = "EasyMediaHelper"
-            version = "1.1"
+//            groupId = "com.github.areebhussainsiddiqui"
+//            artifactId = "EasyMediaHelper"
+//            version = "1.1"
         }
     }
     repositories {
