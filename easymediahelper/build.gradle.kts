@@ -1,7 +1,8 @@
-plugins {
-    id("com.android.library") // Change this to 'com.android.library'
-    id("maven-publish")
 
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android") version "1.9.0" // or your current Kotlin version
+    id("maven-publish")
 }
 
 android {
@@ -11,7 +12,6 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 35
-
     }
 
     buildTypes {
@@ -29,26 +29,27 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-//            groupId = "com.github.areebhussainsiddiqui"
-//            artifactId = "EasyMediaHelper"
-//            version = "1.1"
-        }
-    }
-    repositories {
-        maven {
-            url = uri("https://jitpack.io")
-        }
-    }
-}
-dependencies {
 
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    implementation ("androidx.exifinterface:exifinterface:1.3.6")
+dependencies {
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+  //  implementation("androidx.exifinterface:exifinterface:1.3.6")
+
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.areebhussainsiddiqui"
+                artifactId = "EasyMediaHelper"
+                version = "1.0.5"
+
+                from(components["release"])
+            }
+        }
+    }
 }
