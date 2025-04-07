@@ -6,17 +6,23 @@ EasyMediaHelper is a lightweight Android library designed to simplify access to 
 
 To use EasyMediaHelper in your project, add the following dependency to your `build.gradle` file:
 
+### Step 1: Add the dependency to your app module's build.gradle file
+
 ```groovy
-// Add JitPack repository to your root build.gradle (project-level)
+ implementation 'com.github.areebhussainsiddiqui:EasyMediaHelper:1.0.5'
+```
+
+### Step 2: Add the JitPack repository to your root `build.gradle` file (project-level)
+
+```groovy
 allprojects {
     repositories {
-        ...
+        google()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
-
-
-
+```
 ## Permissions
 
 Add the following permissions to your `AndroidManifest.xml`:
