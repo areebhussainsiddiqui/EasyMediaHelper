@@ -1,6 +1,10 @@
 package com.ahs.easymediahelper;
 
 
+import static com.ahs.easymediahelper.EasyMediaHelper.REQUEST_BROWSE;
+import static com.ahs.easymediahelper.EasyMediaHelper.REQUEST_IMAGE_CAPTURE;
+import static com.ahs.easymediahelper.EasyMediaHelper.REQUEST_VIDEO_CAPTURE;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
