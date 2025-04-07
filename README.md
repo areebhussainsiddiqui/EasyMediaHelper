@@ -1,5 +1,5 @@
 # EasyMediaHelper
-
+[![Release](https://jitpack.io/v/User/Repo.svg)](https://jitpack.io/#User/Repo)
 EasyMediaHelper is a lightweight Android library designed to simplify access to media such as camera, video, and file browsing functionalities. This library capture media i.e (Picture and Video), and file browsing seamlessly.
 
 ## Installation
