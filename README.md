@@ -1,6 +1,6 @@
 # EasyMediaHelper
 
-EasyMediaHelper is a lightweight Android library designed to simplify access to media such as camera, video, and file browsing functionalities. This library handles permissions, media capture, and file browsing seamlessly.
+EasyMediaHelper is a lightweight Android library designed to simplify access to media such as camera, video, and file browsing functionalities. This library capture media i.e (Picture and Video), and file browsing seamlessly.
 
 ## Installation
 
